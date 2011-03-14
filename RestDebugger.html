@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Adobe AIR Project</title>
+    <link rel="stylesheet" href="css/rest-client.css" type="text/css" />
+    <script type="text/javascript" src="lib/jquery/jquery-1.5.min.js"></script>
+    <script type="text/javascript" src="lib/air/AIRAliases.js"></script>
+    <script type="text/javascript" src="lib/air/AIRLocalizer.js"></script>
+    <script type="text/javascript" src="lib/air/AIRMenuBuilder.js"></script>
+    <script type="application/x-shockwave-flash" src="lib/air/applicationupdater.swf"></script>
+    <script type="text/javascript" src="lib/storage.js"></script>
+    <script type="text/javascript" src="lib/config.js"></script>
+    <script type="text/javascript" src="lib/request.js"></script>
+    <script type="text/javascript" src="lib/rest-client.js"></script>
+    <script type="text/javascript" src="lib/main.js"></script>
+  </head>
+  <body>
+    <h1>eZ Publish REST debugger</h1>
+    <form id="mainForm" method="post" action="">
+      <div id="req">
+        <fieldset>
+          <legend>Request</legend>
+          <p>
+              <label for="restEndpointServer">REST endpoint server:</label>
+              <input type="text" id="restEndpointServer" class="inputText" value="" />
+              <span class="example">ie. http://myrestserver.com (no trailing slash)</span>
+          </p>
+          <p>
+              <label for="restEndpointURI">REST endpoint URI:</label>
+              <input type="text" id="restEndpointURI" class="inputText" value="" />
+              <span class="example">ie. /api/ezp/content/node/2 (with starting slash)</span>
+          </p>
+          <p>
+            <label>Method:</label>
+            <label class="labelvert" for="get"><input class="radio" type="radio" checked="checked" value="get" name="method" id="methodGet" tabindex="2"> GET</label>
+            <label class="labelvert" for="post"><input class="radio" type="radio" value="post" name="method" id="methodPost" tabindex="2"> POST</label>
+            <!--<label class="labelvert" for="put"><input class="radio" type="radio" value="put" name="method" id="methodPut" tabindex="2"> PUT</label>
+            <label class="labelvert" for="delete"><input class="radio" type="radio" value="delete" name="method" id="methodDelete" tabindex="2"> DELETE</label>
+            <label class="labelvert" for="head"><input class="radio" type="radio" value="head" name="method" id="methodHead" tabindex="2"> HEAD</label>
+            <label class="labelvert" for="options"><input class="radio" type="radio" value="options" name="method" id="methodOptions" tabindex="2"> OPTIONS</label>-->
+          </p>
+          <p>
+            <label for="rememberSettings">Remember my settings</label>
+            <input type="checkbox" name="rememberSettings" id="rememberSettings" checked="checked" /> 
+          </p>
+          <p>
+            <input type="button" value="Submit" id="submit" />
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Authentication</legend>
+          <label>Authentication type:</label>
+          <select id="authenticationTypeSelection">
+            <option value="noauth" selected="selected">No authentication</option>
+            <option value="oauth2">OAuth 2.0</option>
+            <option value="basic">Basic Auth</option>
+          </select>
+          <div id="oauth2" class="authType">
+            <p>
+              <label for="oauth2ClientId">Client ID:</label>
+              <input type="text" class="inputText" name="oauth2ClientId" id="oauth2ClientId" value="" />
+            </p>
+            <p>
+              <label for="oauth2ClientSecret">Client Secret:</label>
+              <input type="text" class="inputText" name="oauth2ClientSecret" id="oauth2ClientSecret" value="" /> 
+            </p>
+            <p>
+              <label for="oauth2ClientEndpoint">Client Endpoint:</label>
+              <input type="text" class="inputText" name="oauth2ClientEndpoint" id="oauth2ClientEndpoint" value="" /> 
+            </p>
+            <p>
+              <label for="oauth2AccessToken">Access token (optional):</label>
+              <input type="text" class="inputText" name="oauth2AccessToken" id="oauth2AccessToken" value="" /> 
+            </p>
+            <p>
+              <label for="oauth2RefreshToken">Refresh token (optional):</label>
+              <input type="text" class="inputText" name="oauth2RefreshToken" id="oauth2RefreshToken" value="" /> 
+            </p>
+          </div>
+          <div id="basic" class="authType">
+            
+          </div>
+        </fieldset>
+      </div>
+      <div id="resp">
+        <fieldset>
+          <legend>Response</legend>
+          <div id="loader">Loading...</div>
+          <div id="responsePrint">
+            <p>
+              <label for="responseStatus">HTTP Code:</label>
+              <span id="responseStatus"></span>
+            </p>
+            <p>
+              <label for="responseHeaders">Response headers:</label>
+              <textarea class="inputText" name="responseHeaders" id="responseHeaders"></textarea>
+            </p>
+            <p>
+              <label for="responseBody">Response body:</label>
+              <textarea class="inputText" name="responseBody" id="responseBody"></textarea>
+            </p>
+          </div>
+        </fieldset>
+      </div>
+    </form>
+  </body>
+</html>
