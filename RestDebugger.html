@@ -2,8 +2,11 @@
 <html>
   <head>
     <title>New Adobe AIR Project</title>
+    <link href="css/prettify.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="css/rest-client.css" type="text/css" />
     <script type="text/javascript" src="lib/jquery/jquery-1.5.min.js"></script>
+    <script type="text/javascript" src="lib/prettify.js"></script>
+    <script type="text/javascript" src="lib/beautify.js"></script>
     <script type="text/javascript" src="lib/air/AIRAliases.js"></script>
     <script type="text/javascript" src="lib/air/AIRLocalizer.js"></script>
     <script type="text/javascript" src="lib/air/AIRMenuBuilder.js"></script>
@@ -76,6 +79,7 @@
               <label for="oauth2RefreshToken">Refresh token (optional):</label>
               <input type="text" class="inputText" name="oauth2RefreshToken" id="oauth2RefreshToken" value="" /> 
             </p>
+            <!--<iframe src="about:blank" id="oauth2LoginFrame"></iframe>-->
           </div>
           <div id="basic" class="authType">
             
@@ -95,12 +99,14 @@
               <label for="responseHeaders">Response headers:</label>
               <textarea class="inputText" name="responseHeaders" id="responseHeaders"></textarea>
             </p>
-            <p>
-              <label for="responseBody">Response body:</label>
-              <textarea class="inputText" name="responseBody" id="responseBody"></textarea>
-            </p>
+            <h2>Response body:</h2>
+            <pre class="prettyprint lang-js" id="responseBody"></pre>
           </div>
         </fieldset>
+      </div>
+      <div id="oauth2Login" style="display:none;">
+        <h2>Please authenticate below:</h2>
+        <iframe src="about:blank" id="oauth2LoginFrame"></iframe>
       </div>
     </form>
   </body>

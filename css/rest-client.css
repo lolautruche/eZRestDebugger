@@ -18,3 +18,5 @@ span.example{font-style: italic; font-size: 10px;}
 #resp {display:none;}
 #loader {display:none; height: 30px; padding-top: 50px; text-align: center; background: url(loader.gif) no-repeat center 5px;}
 #responsePrint {display:none;}
+
+#oauth2LoginFrame {width: 500px; height: 300px;}
