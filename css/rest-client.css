@@ -16,6 +16,7 @@ span.example{font-style: italic; font-size: 10px;}
 .authType {display:none;}
 
 #resp {display:none;}
+#postParamsContainer {display: none;}
 #loader {display:none; height: 30px; padding-top: 50px; text-align: center; background: url(loader.gif) no-repeat center 5px;}
 #responsePrint {display:none;}
 
