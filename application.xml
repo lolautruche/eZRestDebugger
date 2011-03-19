@@ -14,27 +14,27 @@
 -->
 
 	<!-- The application identifier string, unique to this application. Required. -->
-	<id>net.lolart.RestDebugger</id>
+	<id>net.lolart.eZRestDebugger</id>
 
 	<!-- Used as the filename for the application. Required. -->
-	<filename>RestDebugger</filename>
+	<filename>eZRestDebugger</filename>
 
 	<!-- The name that is displayed in the AIR application installer. Optional. -->
-	<name>RestDebugger</name>
+	<name>eZRestDebugger</name>
 
 	<!-- An application version designator (such as "v1", "2.5", or "Alpha 1"). Required. -->
 	<version>1.0</version>
 
 	<!-- Description, displayed in the AIR application installer. Optional. -->
-	<description/>
+	<description>This autonomous application lets you debug your REST services developed on top of eZ Publish REST interface (requires eZ Publish Matterhorn). It supports both OAuth 2.0 and Basic Auth authentication styles.</description>
 
 	<!-- Copyright information. Optional -->
-	<copyright/>
+	<copyright>Jérôme Vieilledent 2011. Licensed under GPL v2 Licence</copyright>
 
 	<!-- Settings for the application's initial window. Required. -->
 	<initialWindow>
 		<!-- The main HTML file of the application. Required. -->
-		<content>RestDebugger.html</content>
+		<content>eZRestDebugger.html</content>
 		
 		<!-- The title of the main window. Optional. -->
 		<title/>
@@ -84,12 +84,12 @@
 
 	<!-- The icon the system uses for the application. For at least one resolution,
 		 specify the path to a PNG file included in the AIR package. Optional. -->
-	<icon>
-	<image16x16>icons/AIRApp_16.png</image16x16>
-<image32x32>icons/AIRApp_32.png</image32x32>
-<image48x48>icons/AIRApp_48.png</image48x48>
-<image128x128>icons/AIRApp_128.png</image128x128>
-</icon>
+  <icon>
+    <image16x16>icons/eZ_16.png</image16x16>
+    <image32x32>icons/eZ_32.png</image32x32>
+    <image48x48>icons/eZ_48.png</image48x48>
+    <image128x128>icons/eZ_128.png</image128x128>
+  </icon>
 
 	<!-- Whether the application handles the update when a user double-clicks an update version
 	of the AIR file (true), or the default AIR application installer handles the update (false).
