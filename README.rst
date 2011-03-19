@@ -7,4 +7,4 @@ This autonomous application lets you debug your `REST <http://en.wikipedia.org/w
 
 It supports both `OAuth 2.0 <http://oauth.net/2/>`_ and Basic Auth authentication styles.
 
-eZRestDebugger is multi-platform (Mac, Linux, Windows) and runs on top of `Adobe AIR runtime <http://get.adobe.com/air/>_`.
+eZRestDebugger is multi-platform (Mac, Linux, Windows) and runs on top of `Adobe AIR runtime <http://get.adobe.com/air/>`_.
