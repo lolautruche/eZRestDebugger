@@ -98,7 +98,7 @@
 	
 	<!-- Whether the application can be launched when the user clicks a link in a web browser.
 	Optional. Default false. -->
-	<allowBrowserInvocation>true</allowBrowserInvocation>
+	<allowBrowserInvocation>false</allowBrowserInvocation>
 
 	<!-- Listing of file types for which the application can register. Optional. -->
 	<fileTypes>
