@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>New Adobe AIR Project</title>
+    <title>eZ Publish REST debugger</title>
     <link href="css/prettify.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="css/rest-client.css" type="text/css" />
     <script type="text/javascript" src="lib/jquery/jquery-1.5.min.js"></script>
@@ -18,7 +18,6 @@
     <script type="text/javascript" src="lib/main.js"></script>
   </head>
   <body>
-    <h1>eZ Publish REST debugger</h1>
     <form id="mainForm" method="post" action="">
       <div id="req">
         <fieldset>
@@ -54,9 +53,8 @@
           <legend>Authentication</legend>
           <label>Authentication type:</label>
           <select id="authenticationTypeSelection">
-            <option value="noauth" selected="selected">No authentication</option>
-            <option value="oauth2">OAuth 2.0</option>
-            <option value="basic">Basic Auth</option>
+            <option value="oauth2" selected="selected">OAuth 2.0</option>
+            <option value="basic">Basic Auth / No authentication</option>
           </select>
           <div id="oauth2" class="authType">
             <p>
@@ -79,10 +77,11 @@
               <label for="oauth2RefreshToken">Refresh token (optional):</label>
               <input type="text" class="inputText" name="oauth2RefreshToken" id="oauth2RefreshToken" value="" /> 
             </p>
-            <!--<iframe src="about:blank" id="oauth2LoginFrame"></iframe>-->
           </div>
           <div id="basic" class="authType">
-            
+            <p>
+              You will be prompted for Username and Password if applicable
+            </p>
           </div>
         </fieldset>
       </div>
